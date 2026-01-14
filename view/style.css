@@ -1,0 +1,97 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #7aa2d5;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main Dashboard Box */
+        .dashboard {
+            width: 550px;
+            background: #edf0f6fa;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(28, 19, 19, 0.15);
+            padding: 35px;
+        }
+
+        /* Header Box */
+        .dashboard-header {
+            background: #2c3e50;
+            color: #ffffff;
+            height: 80px;
+
+            /* center text horizontally & vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            border-radius: 10px;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+
+        /* Button Area */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center; /* center buttons */
+        }
+
+.btn {
+    width: 85%;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+
+    /* smooth & soft animation */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+        .btn-manage {
+            background: #21abeb;
+        }
+
+        .btn-create {
+            background: #27ae60;
+        }
+
+        .btn-assign {
+            background: #22746f;
+        }
+
+        .btn:hover {
+    transform: translateY(-3px);   /* 🔹 halka upore uthbe */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+        /* Footer */
+        .dashboard-footer {
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        .logout {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .logout:hover {
+            background: #491812;
+        }

@@ -1,34 +1,106 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
+        /* Header section */
+        .header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px 40px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Form container */
+        .container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #0077cc;
+            box-shadow: 0 0 5px rgba(0,119,204,0.5);
+        }
+
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        a {
+            text-align: center;
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
+    <header>
+    <div class="header">
+        Login
+    </div>
+</header>
 
-    <header><h1>Login</h1></header>
+    <!-- Form container -->
+    <div class="container">
+        <form action="../model/login.php" method="POST">
+            <input type="email" name="email" required placeholder="Enter email">
 
+            <input type="password" name="password" required placeholder="Enter password">
 
-    <form action="../model/login.php" method="POST">
-        
-            
-            <input type="email" name="email" required placeholder="Enter email"><br><br>
-            
-            <input type="password" name="password" required placeholder="enter password"><br><br>
+            <button type="submit">Login</button>
 
-        <button type="submit">Login</button><br><br>
-
-        <?php if ($error != "") { ?>
-        
-
-        <a href="changepassword.html">Forgot password?</a>
-
-        
-    </form>
-
+            <a href="changepassword.html">Forgot password?</a>
+        </form>
+    </div>
 
 </body>
 </html>

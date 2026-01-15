@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -11,6 +11,7 @@
 
     <header><h1>Login</h1></header>
 
+
     <form action="../model/login.php" method="POST">
         
             
@@ -20,7 +21,10 @@
 
         <button type="submit">Login</button><br><br>
 
-        <a href="forgetpass.html">Forgot password?</a>
+        <?php if ($error != "") { ?>
+        
+
+        <a href="changepassword.html">Forgot password?</a>
 
         
     </form>

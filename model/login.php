@@ -34,9 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             exit();
         } 
-        else {
-            echo "Invalid email or password";
-        }
+       else {
+        
+        echo "Invalid email or password";
+    }
     } 
     else {
         echo "Query failed: " . mysqli_error($conn);

@@ -1,24 +1,44 @@
 <?php
-require "db.php";
+session_start();
+require_once "db.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
     // Simple query (not safe for production)
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
+    $sqll = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $resultl = mysqli_query($conn, $sqll);
 
-    if (isset($result)) {
-        $num = mysqli_num_rows($result);
+    if ($resultl) {
+        $num = mysqli_num_rows($resultl);
+
         if ($num > 0) {
-            // Login successful, redirect
-            header("Location: ../view/Login.html");
+            $user = mysqli_fetch_assoc($resultl);
+
+            // Store user info in session
+            $_SESSION['user_id']   = $user['id'];
+            $_SESSION['role']      = $user['role'];
+            $_SESSION['user_name'] = $user['user_name'];
+
+            // Redirect based on role
+            if ($user['role'] == 'admin') {
+                header("Location: ../controler/admindashboard.html");
+            } 
+            else if ($user['role'] == 'faculty') {
+                header("Location: ../controler/facultydashboard.html");
+            } 
+            else if ($user['role'] == 'student') {
+                header("Location: ../controler/studentdashboard.html");
+            }
+
             exit();
-        } else {
-            echo "Credentials don't match";
+        } 
+        else {
+            echo "Invalid email or password";
         }
-    } else {
+    } 
+    else {
         echo "Query failed: " . mysqli_error($conn);
     }
 }

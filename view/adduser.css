@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+.container {
+            width: 500px;
+            max-width: 90%;
+            margin: 60px auto;
+            background: white;
+            padding: 35px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h2 {
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            background: #1e3a5f;
+            color: white;
+            padding: 12px 15px;
+            margin: 25px auto 15px; 
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            width: 80%;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #26c6da;
+            transform: scale(1.05);
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #00acc1;
+            box-shadow: 0 0 10px rgba(0,172,193,0.4);
+        }
+
+        a {
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        a:hover {
+            color: #26c6da;
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 25px 20px;
+            }
+        }
+    

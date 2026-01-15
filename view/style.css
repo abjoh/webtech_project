@@ -23,11 +23,11 @@ body {
 }
 
 .container {
-    width: 500px;              /* slightly bigger form */
+    width: 500px;              
     max-width: 90%;
-    margin: 60px auto;         /* center horizontally */
+    margin: 60px auto;         
     background: white;
-    padding: 35px 40px;        /* more padding */
+    padding: 35px 40px;        
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     text-align: center;
@@ -39,11 +39,11 @@ button {
     background: #1e3a5f;
     color: white;
     padding: 12px 15px;
-    margin: 15px auto;       /* center button */
+    margin: 15px auto;       
     text-decoration: none;
     border-radius: 8px;
     border: none;
-    width: 80%;              /* neat width */
+    width: 80%;              
     font-size: 1.05em;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -60,7 +60,7 @@ button:hover {
     background: #26c6da;
     color: white;
     padding: 12px;
-    margin: 20px auto;       /* centered */
+    margin: 20px auto;      
     border-radius: 8px;
     width: 80%;
     text-align: center;
@@ -136,7 +136,7 @@ th {
 
 .dashboard-title {
     text-align: center;
-    color: #26c6da;       /* bright teal for Student Dashboard */
+    color: #26c6da;       
     font-size: 2em;
     margin-bottom: 8px;
     font-weight: bold;
@@ -144,7 +144,7 @@ th {
 
 h2.welcome-message {
     text-align: center;
-    color: #ff7043;       /* warm orange for Welcome, Student */
+    color: #ff7043;       
     font-size: 1.5em;
     margin-top: 0;
 }

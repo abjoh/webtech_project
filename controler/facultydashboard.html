@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <title>Faculty Dashboard</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+
+            /* Flex for vertical + horizontal centering */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            align-items:center;
+        }
+
+        .header .links a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Body container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* center vertically */
+            flex-grow: 1; /* take remaining space after header */
+            gap: 20px;
+        }
+
+        /* Buttons styling */
+        .container button {
+            width: 250px;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #0077cc;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .container button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+    
 </head>
 <body>
+
+    <header>
+    <div class="header">
+        <h1>Faculty Dashboard</h1>
+        <div class="links">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Log Out</a>
+        </div>
+    </div>
+</header>
+
+    <!-- Body section with buttons -->
+    <div class="container">
+        <button onclick="window.location.href='#'">Assigned Courses</button>
+        <button onclick="window.location.href='#'">Upload Marks and Grades</button>
+        <button onclick="window.location.href='#'">View Enrolled Students</button>
+    </div>
 
 </body>
 </html>

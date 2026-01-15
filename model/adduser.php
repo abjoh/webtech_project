@@ -1,25 +1,25 @@
 <?php
-require db.php;
+require_once 'db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-	$username=$_POST['user_name'];
+	$username=$_POST['username'];
 	$email=$_POST['email'];
 	$pass=$_POST['password'];
 	$blood_group=$_POST['blood_group'];
 	$role=$_POST['role'];
-	$status=$_POST['status'];
+	$department=$_POST['department'];
+	
+    
 
-
-
-	$sql="insert into users(user_name,email,password,role,status,user_id,blood_group)values($username,$email,$pass,$role,$status,$blood_group)";
+	$sql="insert into users(user_name,email,password,role,blood_group,department)values('$username','$email','$pass','$role','$blood_group','$department')";
 	$result=mysqli_query($conn,$sql);
 	if ($result) {
       echo "Data inserted succesfully";
       echo"<br>";
-      echo"<a href="../view/adduser.html">Prevvious page</a> ";
-	}
+       echo '<a href="../controler/adduser.html">Previous page</a>';	}
 	else{
 		die(mysqli_error($conn));
 	}
 }
+
 ?>

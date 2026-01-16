@@ -89,7 +89,10 @@
     </div>
 </header>
 
-    <!-- Form container -->
+<?php if(!empty($error)) { ?>
+        <div class="error"><?= $error ?></div>
+    <?php } ?>
+
     <div class="container">
         <form action="../model/login.php" method="POST">
             <input type="email" name="email" required placeholder="Enter email">

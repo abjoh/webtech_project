@@ -146,12 +146,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-
+<header>
 <div class="header">
     <h1>Delete User</h1>
     <a href="logout.php">Logout</a>
 </div>
-
+</header>
 
 <div class="container">
     <div class="card">
@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php } ?>
 
         <form method="POST">
-            <input type="text" name="user_id" placeholder="Enter User ID to delete" required>
+            <input type="text" name="user_id" placeholder="Enter User ID to delete" >
             <button type="submit">Delete User</button>
         </form>
 

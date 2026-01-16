@@ -85,7 +85,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
     <div class="header">
         <h1>Faculty Dashboard</h1>
         <div class="links">
-            <a href="#">Profile</a>
+            <a href="../model/viewprofile.php">Profile</a>
             <a href="../model/logout.php">Logout</a>
         </div>
     </div>
@@ -93,8 +93,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
 
     
     <div class="container">
-        <button onclick="window.location.href='assignedcourse.php'">Assigned Courses</button>
-        <button onclick="window.location.href='uploadgrade.php'">Upload Marks and Grades</button>
+        <button onclick="window.location.href='../model/assignedcourses.php'">Assigned Courses</button>
+        <button onclick="window.location.href='../model/uploadgrades.php'">Upload Marks and Grades</button>
         <button onclick="window.location.href='../model/enrolledstudents.php'">View Enrolled Students</button>
     </div>
 

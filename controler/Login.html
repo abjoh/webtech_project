@@ -3,107 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <style>
-        /* General body styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    <link rel="stylesheet" href="../view/Login.css">
 
-        /* Header section */
-        .header {
-            background-color: #0077cc;
-            color: white;
-            padding: 20px 40px;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    <script>
+        function validateLoginForm() {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            let errors = [];
 
-        /* Form container */
-        .container {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
+        
+            if (email === '') {
+                errors.push("Email is required.");
+            } else {
+                // simple email pattern check
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    errors.push("Invalid email format.");
+                }
+            }
 
-        form {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            display: flex;
-            flex-direction: column;
-            width: 350px;
-        }
+            // Check password
+            if (password === '') {
+                errors.push("Password is required.");
+            }
 
-        input, button {
-            padding: 12px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false;
+            }
 
-        input:focus {
-            outline: none;
-            border-color: #0077cc;
-            box-shadow: 0 0 5px rgba(0,119,204,0.5);
+            return true; // submit form
         }
-
-        button {
-            background-color: #0077cc;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background-color: #005fa3;
-        }
-
-        a {
-            text-align: center;
-            color: #0077cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    </script>
 </head>
 <body>
 
-    <header>
+<header>
     <div class="header">
         Login
     </div>
 </header>
 
-<?php if(!empty($error)) { ?>
-        <div class="error"><?= $error ?></div>
-    <?php } ?>
-
-    <div class="container">
-        <form action="../model/login.php" method="POST">
-            <input type="email" name="email" required placeholder="Enter email">
-
-            <input type="password" name="password" required placeholder="Enter password">
-
-            <button type="submit">Login</button>
-
-            <a href="changepassword.html">Forgot password?</a>
-        </form>
-    </div>
+<div class="container">
+    <form action="../model/login.php" method="POST" onsubmit="return validateLoginForm()">
+        <input type="text" name="email" id="email" placeholder="Enter email">
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <button type="submit">Login</button>
+        <a href="changepassword.html">Forgot password?</a>
+    </form>
+</div>
 
 </body>
 </html>

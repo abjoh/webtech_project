@@ -91,7 +91,7 @@ if (!$result) {
 
         .btn {
             padding: 10px 25px;
-            background-color: #0077cc;
+            background-color: #555;
             color: white;
             text-decoration: none;
             border-radius: 6px;

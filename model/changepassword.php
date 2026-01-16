@@ -1,40 +1,32 @@
 <?php
-require_once "db.php";
+session_start();
+require_once 'db.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // 1. Get inputs
     $email = $_POST['email'];
-    $user_name = $_POST['username'];
-    $new_password = $_POST['newpass'];
+    $user_id = $_POST['user_id'];
+    $newpass = $_POST['newpass'];
 
-    // 2. Find the user ID using email and username
-    $sqlcp = "SELECT user_id FROM users WHERE email = '$email' AND user_name = '$user_name'";
-    $resultcp = mysqli_query($conn, $sqlcp);
+    // Check if user exists
+    $sql = "SELECT * FROM users WHERE email='$email' AND user_id='$user_id'";
+    $result = mysqli_query($conn, $sql);
 
-    if ($resultcp) {
+    if (!$result) {
+        echo "<script>alert('Database error.'); window.history.back();</script>";
+        exit();
+    }
 
-        if (mysqli_num_rows($resultcp) > 0) {
-
-            // 3. Get the user ID
-            $row = mysqli_fetch_assoc($resultcp);
-            $user_id = $row['user_id'];
-
-            // 4. Update password using ID
-            $update = "UPDATE users SET password = '$new_password' WHERE user_id = '$user_id'";
-            if (mysqli_query($conn, $update)) {
-                header("Location: ../controler/Login.html");
-                exit();
-            } else {
-                echo "Password update failed: " . mysqli_error($conn);
-            }
-
+    if (mysqli_num_rows($result) > 0) {
+        // Update password
+        $update = "UPDATE users SET password='$newpass' WHERE email='$email' AND user_id='$user_id'";
+        if (mysqli_query($conn, $update)) {
+            echo "<script>alert('Password updated successfully!'); window.location.href='Login.html';</script>";
         } else {
-            echo "Invalid email or username";
+            echo "<script>alert('Failed to update password.'); window.history.back();</script>";
         }
-
     } else {
-        echo "Query failed: " . mysqli_error($conn);
+        echo "<script>alert('Wrong credentials!'); window.history.back();</script>";
     }
 }
 ?>

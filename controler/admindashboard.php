@@ -85,7 +85,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
 <div class="header">
     <h1>Admin Dashboard</h1>
     <div class="links">
-        <a href="#">Profile</a>
+        <a href="../model/viewprofile.php">Profile</a>
         <a href="../model/logout.php">Logout</a>
     </div>
 </div>
@@ -94,7 +94,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
 <div class="container">
     <button onclick="window.location.href='manageuser.php'">Manage Users</button>
     <button onclick="window.location.href='../model/createcourse.php'">Create Courses</button>
-    <button onclick="window.location.href='assigncourse.php'">Assign Courses</button>
+    <button onclick="window.location.href='../model/assigncourses.php'">Assign Courses</button>
     <button onclick="window.location.href='../model/viewusers.php'">View Users</button>
      <button onclick="window.location.href='../model/viewcourses.php'">View Courses</button>
 </div>

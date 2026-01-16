@@ -1,16 +1,13 @@
 
-        /* General body styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        /* Header styling (normal) */
         .header {
             background-color: #0077cc;
             color: white;
@@ -22,44 +19,59 @@
 
         .header h1 {
             margin: 0;
-            font-size: 28px;
         }
 
-        .header .links a {
+        .header a {
             color: white;
-            margin-left: 15px;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .header .links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Body container */
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* center horizontally */
-            justify-content: center; /* center vertically */
-            padding: 40px;
-            gap: 30px;
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        /* Buttons styling */
-        .container button {
-            width: 200px;
-            padding: 15px;
-            font-size: 18px;
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
             border: none;
             border-radius: 8px;
-            cursor: pointer;
             background-color: #0077cc;
             color: white;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            cursor: pointer;
         }
 
-        .container button:hover {
+        button:hover {
             background-color: #005fa3;
         }
+
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .error { color: red; }
+        .success { color: green; }
     

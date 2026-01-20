@@ -24,6 +24,7 @@ $user = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <title>My Profile</title>
+    
     <style>
         body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
         .header { background:#0077cc; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
@@ -36,6 +37,7 @@ $user = mysqli_fetch_assoc($result);
         .back-btn:hover { background:#005fa3; }
     </style>
 </head>
+
 <body>
 
 <div class="header">

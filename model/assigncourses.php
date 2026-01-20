@@ -71,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .success { color:green; margin-bottom:15px; }
 
         .back-btn { background:#555; margin-top:10px; }
+        
         .back-btn:hover { background:#333; }
     </style>
 

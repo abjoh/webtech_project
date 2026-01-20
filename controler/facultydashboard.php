@@ -75,8 +75,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
         .container button:hover {
             background-color: #005fa3;
         }
+    
     </style>
 </head>
+
 <body>
 
 <header>
@@ -94,5 +96,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
         <button onclick="window.location.href='../model/uploadgrades.php'">Upload Marks and Grades</button>
         <button onclick="window.location.href='../model/enrolledstudents.php'">View Enrolled Students</button>
     </div>
+    
 </body>
 </html>

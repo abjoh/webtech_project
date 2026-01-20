@@ -8,6 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 $sql = "SELECT course_id, course_name, section, time, day, room FROM courses ORDER BY course_id, section";
 $result = mysqli_query($conn, $sql);
+
 if (!$result) {
     die("Query Failed: " . mysqli_error($conn));
 }
@@ -18,6 +19,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <title>View Courses</title>
+    
     <style>
         body {
             margin: 0;
@@ -110,6 +112,7 @@ if (!$result) {
         }
     </style>
 </head>
+
 <body>
 
 <div class="header">

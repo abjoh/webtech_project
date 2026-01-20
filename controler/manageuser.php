@@ -96,5 +96,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
         Deactivate Account
     </button>
 </div>
+
 </body>
 </html>

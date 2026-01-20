@@ -15,13 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result && mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
 
-        
         $_SESSION['user_id']   = $user['user_id'];   
         $_SESSION['role']      = $user['role'];      
         $_SESSION['user_name'] = $user['user_name'];
         $_SESSION['email']     = $user['email'];
 
-        
         if ($user['role'] == 'admin') {
             header("Location: ../controler/admindashboard.php");
         } elseif ($user['role'] == 'faculty') {

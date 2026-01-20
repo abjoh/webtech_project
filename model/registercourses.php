@@ -2,7 +2,6 @@
 session_start();
 require_once 'db.php';
 
-/* ---------- STUDENT ONLY ---------- */
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
     header("Location: ../controler/Login.html");
     exit();
@@ -12,10 +11,8 @@ $student_id = $_SESSION['user_id'];
 $message = '';
 $errors = [];
 
-/* ---------- FETCH COURSES ---------- */
 $courses = mysqli_query($conn, "SELECT course_id, course_name, section FROM courses ORDER BY course_id");
 
-/* ---------- HANDLE FORM SUBMIT ---------- */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!isset($_POST['courses'])) {
@@ -26,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             list($course_id, $section) = explode('|', $courseData);
 
-            // Prevent duplicate enrollment
             $check = mysqli_query(
                 $conn,
                 "SELECT * FROM enrolled_students 
@@ -62,7 +58,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* HEADER */
 .header {
     background-color: #0077cc;
     color: white;
@@ -83,7 +78,6 @@ body {
     font-weight: bold;
 }
 
-/* CONTAINER */
 .container {
     max-width: 700px;
     margin: 40px auto;
@@ -183,8 +177,6 @@ if (!empty($errors)) echo "<div class='error'>" . implode("<br>", $errors) . "</
 <button type="submit">Register Selected Courses</button>
 
 </form>
-
 </div>
-
 </body>
 </html>

@@ -2,15 +2,12 @@
 session_start();
 require_once 'db.php';
 
-/* ---------- STUDENT ONLY ---------- */
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
     header("Location: ../controler/Login.html");
     exit();
 }
 
 $student_id = $_SESSION['user_id'];
-
-/* ---------- FETCH REGISTERED COURSES + FACULTY ---------- */
 $sql = "
     SELECT 
         c.course_id,
@@ -50,7 +47,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* HEADER */
 .header {
     background-color: #0077cc;
     color: white;
@@ -71,7 +67,6 @@ body {
     font-weight: bold;
 }
 
-/* CONTAINER */
 .container {
     max-width: 1000px;
     margin: 40px auto;
@@ -81,7 +76,6 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -158,11 +152,9 @@ if ($result && mysqli_num_rows($result) > 0) {
     echo "<tr><td colspan='7' class='no-data'>No registered courses found</td></tr>";
 }
 ?>
-
     </tbody>
 </table>
 
 </div>
-
 </body>
 </html>

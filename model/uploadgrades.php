@@ -26,14 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Error: Student ID not found or not a student.";
     }
 
-    // Check if course exists
+    
     $courseCheck = mysqli_query($conn, "SELECT * FROM courses WHERE course_id='$course_id'");
     if (mysqli_num_rows($courseCheck) == 0) {
         $error = "Error: Course ID not found.";
     }
 
     if (!$error) {
-        // Insert marks
+        
         $insertSql = "INSERT INTO marks (course_id, student_id, quiz1, quiz2, mid, final, grade)
                       VALUES ('$course_id', '$student_id', $quiz1, $quiz2, $mid, $final, '$grade')";
 

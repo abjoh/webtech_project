@@ -76,7 +76,7 @@ if (!$result) {
             } else {
                 echo "<tr><td colspan='5'>No courses assigned to you yet.</td></tr>";
             }
-            ?>
+         ?>
         </tbody>
     </table>
 </div>

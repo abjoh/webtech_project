@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  VALUES ('$name','$email','$password','$role','$department','$blood_group')";
 
     if (mysqli_query($conn, $sql_user)) {
-        // Redirect to view users after success
+        
         header("Location:viewusers.php");
         exit();
     } else {
@@ -128,13 +128,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<!-- Header -->
 <div class="header">
     <h1>Create Account</h1>
     <a href="logout.php">Logout</a>
 </div>
 
-<!-- Form Container -->
+
 <div class="container">
     <div class="card">
 

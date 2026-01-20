@@ -2,13 +2,12 @@
 session_start();
 require_once 'db.php';
 
-// Only admin can access
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location: ../controler/Login.html");
     exit();
 }
 
-// Fetch all users
 $users = mysqli_query($conn, "SELECT user_id, user_name, email, role, department, status FROM users ORDER BY user_name ASC");
 ?>
 
@@ -27,7 +26,7 @@ $users = mysqli_query($conn, "SELECT user_id, user_name, email, role, department
             flex-direction: column;
         }
 
-        /* Header */
+        
         .header {
             background-color: #0077cc;
             color: white;
@@ -52,7 +51,7 @@ $users = mysqli_query($conn, "SELECT user_id, user_name, email, role, department
             text-decoration: underline;
         }
 
-        /* Container */
+        
         .container {
             flex-grow: 1;
             padding: 40px;
@@ -101,13 +100,13 @@ $users = mysqli_query($conn, "SELECT user_id, user_name, email, role, department
 </head>
 <body>
 
-<!-- Header -->
+
 <div class="header">
     <h1>View Users</h1>
     <a href="logout.php">Logout</a>
 </div>
 
-<!-- Table Container -->
+
 <div class="container">
     <table>
         <thead>

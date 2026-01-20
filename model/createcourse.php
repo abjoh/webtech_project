@@ -2,7 +2,7 @@
 session_start();
 require_once 'db.php';
 
-/* ---------- ADMIN ACCESS ONLY ---------- */
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location: ../controler/Login.html");
     exit();
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #f4f4f4;
         }
 
-        /* HEADER */
+       
         .header {
             background-color: #0077cc;
             color: white;
@@ -140,12 +140,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<!-- HEADER -->
+
 <div class="header">
     <h1>Create Course</h1>
 </div>
 
-<!-- FORM CONTAINER -->
+
 <div class="container">
 
     <?php if($message != ''): ?>
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <select name="section">
             <option value="">Select Section</option>
             <?php
-            for ($i = 65; $i <= 90; $i++) { // A-Z
+            for ($i = 65; $i <= 90; $i++) { 
                 $char = chr($i);
                 echo "<option value='$char'>$char</option>";
             }

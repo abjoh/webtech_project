@@ -2,7 +2,7 @@
 session_start();
 require_once 'db.php';
 
-// Only admin can access
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location: ../controler/Login.html");
     exit();
@@ -11,11 +11,11 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 $error = "";
 $success = "";
 
-// Handle form submission
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_POST['user_id'];
 
-    // Check if user exists
+    
     $check = mysqli_query($conn, "SELECT role FROM users WHERE user_id='$user_id'");
     if ($check && mysqli_num_rows($check) > 0) {
         $user = mysqli_fetch_assoc($check);
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user['role'] === 'admin' && $user['user_id']='a_1') {
             $error = "Cannot delete main admin!";
         } else {
-            // Delete user
+           
             $sql = "DELETE FROM users WHERE user_id='$user_id'";
             if (mysqli_query($conn, $sql)) {
                 $success = "User deleted successfully!";
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             flex-direction: column;
         }
 
-        /* Header */
+        
         .header {
             background-color: #0077cc;
             color: white;
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-decoration: underline;
         }
 
-        /* Center form */
+        
         .container {
             flex-grow: 1;
             display: flex;

@@ -25,6 +25,7 @@ while ($row = mysqli_fetch_assoc($sectionsResult)) {
     $sections[] = $row;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

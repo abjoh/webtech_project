@@ -9,16 +9,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $role         = $_POST['role'];
     $department   = $_POST['department'];
 
-    // Insert into users table
+    
     $sql = "INSERT INTO users(user_name, email, password, role, blood_group, department)
             VALUES('$username', '$email', '$pass', '$role', '$blood_group', '$department')";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        // Get the newly inserted user_id
         $user_id = mysqli_insert_id($conn);
 
-        // Check role and insert into respective table with name and email
+        
         if ($role == 'student') {
             $sql_student = "INSERT INTO student(student_id,name,email) 
                             VALUES('$user_id', '$username', '$email')";

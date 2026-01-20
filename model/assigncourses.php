@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         function goBack() {
             window.history.back();
         }
-    </script>
+  </script>
 </head>
 <body>
 <header>

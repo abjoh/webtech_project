@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_POST['user_id'];
     $newpass = $_POST['newpass'];
 
-    // Check if user exists
+    
     $sql = "SELECT * FROM users WHERE email='$email' AND user_id='$user_id'";
     $result = mysqli_query($conn, $sql);
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (mysqli_num_rows($result) > 0) {
-        // Update password
+        
         $update = "UPDATE users SET password='$newpass' WHERE email='$email' AND user_id='$user_id'";
         if (mysqli_query($conn, $update)) {
             echo "<script>alert('Password updated successfully!'); window.location.href='Login.html';</script>";

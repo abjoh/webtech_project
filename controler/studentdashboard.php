@@ -16,6 +16,7 @@ $user_id = $_SESSION['user_id'];
     <title>Student Dashboard</title>
 
     <style>
+        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -85,8 +86,10 @@ $user_id = $_SESSION['user_id'];
         .btn:hover {
             background-color: #005fa3;
         }
+    
     </style>
 </head>
+
 <body>
 
 <header>
@@ -99,6 +102,7 @@ $user_id = $_SESSION['user_id'];
     </div>
 </div>
 </header>
+
 <div class="container">
     <h2 class="dashboard-title">Welcome</h2>
     <p class="welcome">Student ID: <strong><?php echo $user_id; ?></strong></p>

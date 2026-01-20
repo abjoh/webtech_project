@@ -17,15 +17,18 @@ $sql = "
     ORDER BY course_id, section
 ";
 $result = mysqli_query($conn, $sql);
+
 if (!$result) {
     die("Query Failed: " . mysqli_error($conn));
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Assigned Courses</title>
+    
     <style>
         body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
         .header { background:#0077cc; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
@@ -40,6 +43,7 @@ if (!$result) {
         .back-btn:hover { background:#005fa3; }
     </style>
 </head>
+
 <body>
 
 <div class="header">

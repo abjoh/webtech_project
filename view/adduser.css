@@ -47,7 +47,7 @@ body {
             border: 1px solid #ccc;
             border-radius: 8px;
             outline: none;
-            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            box-sizing: border-box; 
             font-size: 1em;
             transition: all 0.3s ease;
         }
@@ -62,7 +62,7 @@ body {
             text-decoration: none;
             font-size: 0.9em;
         }
-
+    
         a:hover {
             color: #26c6da;
             text-decoration: underline;

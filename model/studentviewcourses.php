@@ -34,6 +34,7 @@ $sql = "
 
 $result = mysqli_query($conn, $sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,7 +149,9 @@ if ($result && mysqli_num_rows($result) > 0) {
         echo "<td>$facultyDisplay</td>";
         echo "</tr>";
     }
-} else {
+} 
+
+else {
     echo "<tr><td colspan='7' class='no-data'>No registered courses found</td></tr>";
 }
 ?>

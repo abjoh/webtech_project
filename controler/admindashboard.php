@@ -24,6 +24,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
         <a href="../model/logout.php">Logout</a>
     </div>
 </div>
+
 </header>
 
 <div class="container">

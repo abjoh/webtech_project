@@ -21,7 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql_student = "INSERT INTO student(student_id,name,email) 
                             VALUES('$user_id', '$username', '$email')";
             mysqli_query($conn, $sql_student);
-        } elseif ($role == 'faculty') {
+        } 
+
+        elseif ($role == 'faculty') {
             $sql_faculty = "INSERT INTO faculty(faculty_id,name,email) 
                             VALUES('$user_id', '$username', '$email')";
             mysqli_query($conn, $sql_faculty);
@@ -30,7 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Data inserted successfully";
         echo "<br>";
         echo '<a href="../controler/adduser.html">Previous page</a>';
-    } else {
+    } 
+
+    else {
         die(mysqli_error($conn));
     }
 }

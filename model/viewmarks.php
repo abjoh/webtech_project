@@ -1,8 +1,7 @@
 <?php
 session_start();
-require_once "../model/db.php"; // adjust path if needed
+require_once "../model/db.php";
 
-// Security check
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
     header("Location: login.php");
     exit();
@@ -32,7 +31,6 @@ $result = mysqli_query($conn, $sql);
             min-height: 100vh;
         }
 
-        /* ---------- HEADER ---------- */
         .header {
             background-color: #0077cc;
             color: white;
@@ -58,7 +56,6 @@ $result = mysqli_query($conn, $sql);
             text-decoration: underline;
         }
 
-        /* ---------- CONTAINER ---------- */
         .container {
             flex-grow: 1;
             display: flex;
@@ -67,7 +64,6 @@ $result = mysqli_query($conn, $sql);
             padding: 40px;
         }
 
-        /* ---------- TABLE ---------- */
         table {
             width: 90%;
             border-collapse: collapse;
@@ -100,7 +96,6 @@ $result = mysqli_query($conn, $sql);
             color: #0077cc;
         }
 
-        /* ---------- EMPTY MESSAGE ---------- */
         .no-data {
             font-size: 18px;
             color: #555;
@@ -117,7 +112,6 @@ $result = mysqli_query($conn, $sql);
     </div>
 </div>
 </header>
-<!-- CONTENT -->
 
 <div class="container">
 
@@ -153,6 +147,5 @@ $result = mysqli_query($conn, $sql);
 <?php } ?>
 
 </div>
-
 </body>
 </html>

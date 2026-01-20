@@ -2,14 +2,12 @@
 session_start();
 require_once 'db.php';
 
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../controler/Login.html");
     exit();
 }
 
 $user_id = $_SESSION['user_id'];
-
 
 $sql = "SELECT user_name, user_id, role, department FROM users WHERE user_id='$user_id'";
 $result = mysqli_query($conn, $sql);

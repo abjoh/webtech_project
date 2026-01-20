@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!isset($_POST['courses'])) {
         $errors[] = "Please select at least one course.";
-    } else {
+    } 
+
+    else {
 
         foreach ($_POST['courses'] as $courseData) {
 
@@ -143,6 +145,7 @@ function validateSelection() {
 </script>
 
 </head>
+
 <body>
 <header>
 <div class="header">

@@ -21,11 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $grade      = $_POST['grade'];
 
     $studentCheck = mysqli_query($conn, "SELECT * FROM users WHERE user_id='$student_id' AND role='student'");
+    
     if (mysqli_num_rows($studentCheck) == 0) {
         $error = "Error: Student ID not found or not a student.";
     }
 
     $courseCheck = mysqli_query($conn, "SELECT * FROM courses WHERE course_id='$course_id'");
+    
     if (mysqli_num_rows($courseCheck) == 0) {
         $error = "Error: Course ID not found.";
     }
@@ -81,6 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </script>
 </head>
+
 <body>
 <header>
 <div class="header">

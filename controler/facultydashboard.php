@@ -51,7 +51,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
             text-decoration: underline;
         }
 
-        /* Body container */
+        
         .container {
             display: flex;
             flex-direction: column;

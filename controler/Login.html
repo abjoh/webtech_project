@@ -15,14 +15,14 @@
             if (email === '') {
                 errors.push("Email is required.");
             } else {
-                // simple email pattern check
+                
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(email)) {
                     errors.push("Invalid email format.");
                 }
             }
 
-            // Check password
+            
             if (password === '') {
                 errors.push("Password is required.");
             }
@@ -32,7 +32,7 @@
                 return false;
             }
 
-            return true; // submit form
+            return true; 
         }
     </script>
 </head>

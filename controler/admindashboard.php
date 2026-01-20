@@ -23,7 +23,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     min-height: 100vh;
 }
 
-/* ---------- HEADER ---------- */
 .header {
     background-color: #0077cc;
     color: white;
@@ -49,7 +48,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     text-decoration: underline;
 }
 
-/* ---------- MAIN CONTAINER ---------- */
 .container {
     flex-grow: 1;
     display: flex;
@@ -60,7 +58,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     padding: 40px;
 }
 
-/* ---------- DASHBOARD BUTTONS ---------- */
 .container button,
 .container a.btn {
     width: 260px;
@@ -95,7 +92,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     </div>
 </div>
 </header>
-<!-- ---------- CONTENT ---------- -->
+
 <div class="container">
     <button onclick="window.location.href='manageuser.php'">Manage Users</button>
     <button onclick="window.location.href='../model/createcourse.php'">Create Courses</button>

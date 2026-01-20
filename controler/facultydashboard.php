@@ -91,12 +91,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
     </div>
 </header>
 
-    
     <div class="container">
         <button onclick="window.location.href='../model/assignedcourses.php'">Assigned Courses</button>
         <button onclick="window.location.href='../model/uploadgrades.php'">Upload Marks and Grades</button>
         <button onclick="window.location.href='../model/enrolledstudents.php'">View Enrolled Students</button>
     </div>
-
 </body>
 </html>

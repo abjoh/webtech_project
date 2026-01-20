@@ -22,7 +22,6 @@ $user_id = $_SESSION['user_id'];
             background-color: #f4f4f4;
         }
 
-        /* ---------- HEADER ---------- */
         .header {
             background-color: #0077cc;
             color: white;
@@ -48,12 +47,12 @@ $user_id = $_SESSION['user_id'];
             text-decoration: underline;
         }
 
-        /* ---------- CONTAINER (WIDTH FIXED) ---------- */
+       
         .container {
-            max-width: 500px;      /* 🔥 reduced width */
+            max-width: 500px;      
             margin: 50px auto;
             background: white;
-            padding: 30px;         /* 🔥 matches other pages */
+            padding: 30px;        
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.15);
             text-align: center;
@@ -70,7 +69,6 @@ $user_id = $_SESSION['user_id'];
             font-size: 16px;
         }
 
-        /* ---------- BUTTONS ---------- */
         .btn {
             display: block;
             width: 100%;
@@ -102,7 +100,6 @@ $user_id = $_SESSION['user_id'];
     </div>
 </div>
 </header>
-<!-- ---------- CONTENT ---------- -->
 <div class="container">
     <h2 class="dashboard-title">Welcome</h2>
     <p class="welcome">Student ID: <strong><?php echo $user_id; ?></strong></p>
@@ -112,6 +109,5 @@ $user_id = $_SESSION['user_id'];
     <a class="btn" href="../model/viewmarks.php">View Marks & Grades</a>
     
 </div>
-
 </body>
 </html>

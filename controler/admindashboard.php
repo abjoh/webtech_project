@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     header("Location:Login.html");
     exit();
@@ -92,6 +91,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     </div>
 </div>
 </header>
+
 
 <div class="container">
     <button onclick="window.location.href='manageuser.php'">Manage Users</button>

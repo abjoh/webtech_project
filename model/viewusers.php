@@ -14,6 +14,7 @@ $users = mysqli_query($conn, "SELECT user_id, user_name, email, role, department
 <head>
     <meta charset="UTF-8">
     <title>View Users</title>
+    
     <style>
         body {
             margin: 0;
@@ -94,6 +95,7 @@ $users = mysqli_query($conn, "SELECT user_id, user_name, email, role, department
         }
     </style>
 </head>
+
 <body>
 
 <div class="header">

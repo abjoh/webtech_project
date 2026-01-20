@@ -29,7 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         exit();
 
-    } else {
+    } 
+
+    else {
         $error = "Invalid email or password"; 
         echo $error;
         echo"<br>";

@@ -21,13 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $checkSql = "SELECT course_id FROM courses WHERE course_id = $course_id";
     $checkRes = mysqli_query($conn, $checkSql);
+    
     if (!$checkRes) {
         die("Check Query Failed: " . mysqli_error($conn));
     }
 
     if (mysqli_num_rows($checkRes) > 0) {
         $message = "Error: Course ID already exists.";
-    } else {
+    } 
+
+    else {
         $insertSql = "
             INSERT INTO courses (course_id, course_name, section, time, day, room)
             VALUES ($course_id, '$course_name', '$section', '$time', '$day', '$room')
@@ -35,7 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mysqli_query($conn, $insertSql)) {
             header("Location: viewcourses.php");
             exit();
-        } else {
+        } 
+
+        else {
             $message = "Insert Failed: " . mysqli_error($conn);
         }
     }
@@ -47,7 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Create Course</title>
+    
     <style>
+        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -114,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin-bottom: 15px;
         }
     </style>
+    
     <script>
         function validateForm() {
             const courseId = document.getElementById("course_id").value;
@@ -137,6 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </script>
 </head>
+
 <body>
 
 <div class="header">

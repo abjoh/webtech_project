@@ -23,7 +23,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             min-height: 100vh;
         }
 
-    
         .header {
             background-color: #0077cc;
             color: white;
@@ -59,7 +58,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             padding: 40px;
         }
 
-    
         .container button {
             width: 280px;
             padding: 16px;

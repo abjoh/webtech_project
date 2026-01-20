@@ -47,7 +47,6 @@ $user_id = $_SESSION['user_id'];
             text-decoration: underline;
         }
 
-       
         .container {
             max-width: 500px;      
             margin: 50px auto;

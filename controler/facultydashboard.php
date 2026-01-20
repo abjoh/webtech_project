@@ -24,7 +24,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
             flex-direction: column;
             min-height: 100vh;
         }
-
         
         .header {
             background-color: #0077cc;
@@ -51,7 +50,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'faculty') {
             text-decoration: underline;
         }
 
-        
         .container {
             display: flex;
             flex-direction: column;

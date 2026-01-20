@@ -11,8 +11,11 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>Manage Users</title>
+
     <style>
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -74,8 +77,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
         .container button:hover {
             background-color: #005fa3;
         }
+
     </style>
 </head>
+
 <body>
 
 <div class="header">

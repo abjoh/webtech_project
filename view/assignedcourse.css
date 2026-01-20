@@ -8,7 +8,7 @@
             min-height: 100vh;
         }
 
-        /* Header styling */
+        
         .header {
             background-color: #0077cc;
             color: white;
@@ -34,7 +34,6 @@
             text-decoration: underline;
         }
 
-        /* Body container */
         .container {
             display: flex;
             justify-content: center;
@@ -43,7 +42,6 @@
             padding: 40px;
         }
 
-        /* Table styling */
         table {
             border-collapse: collapse;
             width: 80%;

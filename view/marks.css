@@ -1,18 +1,16 @@
-/* Reset default spacing */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     min-height: 100vh;
 }
 
-/* Header styling */
 header {
     background-color: #0077cc;
     color: white;
@@ -22,12 +20,10 @@ header {
     align-items: center;
 }
 
-/* Header title */
 header h2 {
     font-size: 26px;
 }
 
-/* Header links */
 header div a {
     color: white;
     text-decoration: none;
@@ -39,7 +35,6 @@ header div a:hover {
     text-decoration: underline;
 }
 
-/* Form container */
 form {
     background-color: white;
     width: 350px;
@@ -50,7 +45,6 @@ form {
     text-align: center;
 }
 
-/* Input fields */
 input[type="number"],
 select {
     width: 100%;
@@ -60,7 +54,6 @@ select {
     border: 1px solid #ccc;
 }
 
-/* Submit button */
 button {
     width: 100%;
     padding: 12px;

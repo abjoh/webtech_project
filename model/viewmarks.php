@@ -15,6 +15,7 @@ $sql = "SELECT course_id, quiz1, quiz2, mid, final, grade
 
 $result = mysqli_query($conn, $sql);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,6 +103,7 @@ $result = mysqli_query($conn, $sql);
         }
     </style>
 </head>
+
 <body>
 <header>
 <div class="header">

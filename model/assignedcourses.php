@@ -10,7 +10,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'faculty') {
 
 $faculty_id = $_SESSION['user_id'];
 
-
 $sql = "
     SELECT course_id, section, time, day, room
     FROM course_assignment

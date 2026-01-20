@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_POST['user_id'];
     $newpass = $_POST['newpass'];
 
-    
     $sql = "SELECT * FROM users WHERE email='$email' AND user_id='$user_id'";
     $result = mysqli_query($conn, $sql);
 
@@ -16,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Database error.'); window.history.back();</script>";
         exit();
     }
-
     if (mysqli_num_rows($result) > 0) {
         
         $update = "UPDATE users SET password='$newpass' WHERE email='$email' AND user_id='$user_id'";

@@ -6,7 +6,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location:../controler/Login.html");
     exit();
 }
-
 $message = "";
 $errors = [];
 
@@ -89,7 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 alert(errors.join("\n"));
                 return false;
             }
-
             return true;
         }
 

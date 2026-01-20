@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result) {
         $user_id = mysqli_insert_id($conn);
 
-        
         if ($role == 'student') {
             $sql_student = "INSERT INTO student(student_id,name,email) 
                             VALUES('$user_id', '$username', '$email')";

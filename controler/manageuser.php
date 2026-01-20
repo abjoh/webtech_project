@@ -84,7 +84,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     <h1>Manage Users</h1>
     <div class="links">
         <a href="admindashboard.php">Dashboard</a>
-        <a href="#">Profile</a>
+        <a href="../model/viewprofile.php">Profile</a>
         <a href="../model/logout.php">Logout</a>
     </div>
 </div>

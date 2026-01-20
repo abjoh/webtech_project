@@ -54,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #f4f4f4;
         }
 
-       
         .header {
             background-color: #0077cc;
             color: white;
@@ -140,7 +139,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-
 <div class="header">
     <h1>Create Course</h1>
 </div>
@@ -191,7 +189,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <button type="submit">Create</button>
     </form>
-
 
     <button class="back-btn" onclick="goBack()">← Back</button>
 </div>

@@ -6,7 +6,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     exit();
 }
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $name        = $_POST['name'];
@@ -16,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $department  = $_POST['department'];
     $blood_group = $_POST['blood_group'];
 
-    
     $sql_user = "INSERT INTO users (user_name,email,password,role,department,blood_group)
                  VALUES ('$name','$email','$password','$role','$department','$blood_group')";
 
@@ -47,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             flex-direction: column;
         }
 
-        
         .header {
             background-color: #0077cc;
             color: white;
@@ -72,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-decoration: underline;
         }
 
-        
         .container {
             flex-grow: 1;
             display: flex;
@@ -133,7 +129,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <a href="logout.php">Logout</a>
 </div>
 
-
 <div class="container">
     <div class="card">
 
@@ -173,7 +168,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <button type="submit">Create User</button>
         </form>
-
         <a href="../controler/manageuser.php" class="back-btn">← Back to Manage Users</a>
     </div>
 </div>

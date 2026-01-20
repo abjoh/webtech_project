@@ -175,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit">Create User</button>
         </form>
 
-        <a href="../controler/manageusers.php" class="back-btn">← Back to Manage Users</a>
+        <a href="../controler/manageuser.php" class="back-btn">← Back to Manage Users</a>
     </div>
 </div>
 

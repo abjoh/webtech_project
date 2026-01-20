@@ -22,7 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         header("Location:viewusers.php");
         exit();
-    } else {
+    } 
+
+    else {
         $error = "User Insert Failed: " . mysqli_error($conn);
         echo"error";
         echo"<a href=../controler/Login.html>Back to login</a>";
@@ -35,7 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Create Account</title>
+    
     <style>
+        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -122,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </style>
 </head>
+
 <body>
 
 <div class="header">

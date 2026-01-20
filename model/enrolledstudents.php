@@ -15,6 +15,7 @@ $sectionsSql = "
     ORDER BY course_id, section
 ";
 $sectionsResult = mysqli_query($conn, $sectionsSql);
+
 if (!$sectionsResult) {
     die("Query Failed: " . mysqli_error($conn));
 }
@@ -30,6 +31,7 @@ while ($row = mysqli_fetch_assoc($sectionsResult)) {
 <head>
     <meta charset="UTF-8">
     <title>Enrolled Students</title>
+    
     <style>
         body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
 
@@ -57,6 +59,7 @@ while ($row = mysqli_fetch_assoc($sectionsResult)) {
         .back-btn:hover { background:#333; }
     </style>
 </head>
+
 <body>
 <header>
 <div class="header">

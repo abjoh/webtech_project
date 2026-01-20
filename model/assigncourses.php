@@ -6,6 +6,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location:../controler/Login.html");
     exit();
 }
+
 $message = "";
 $errors = [];
 
@@ -39,7 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (mysqli_query($conn, $insertSql)) {
             $message = "Course assigned to faculty successfully!";
-        } else {
+        } 
+
+        else {
             $errors[] = "Database error: " . mysqli_error($conn);
         }
     }
@@ -97,6 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
   </script>
 </head>
+
 <body>
 <header>
 <div class="header">

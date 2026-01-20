@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Database error.'); window.history.back();</script>";
         exit();
     }
+    
     if (mysqli_num_rows($result) > 0) {
         
         $update = "UPDATE users SET password='$newpass' WHERE email='$email' AND user_id='$user_id'";
@@ -23,7 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             echo "<script>alert('Failed to update password.'); window.history.back();</script>";
         }
-    } else {
+    } 
+
+    else {
         echo "<script>alert('Wrong credentials!'); window.history.back();</script>";
     }
 }

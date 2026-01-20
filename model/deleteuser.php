@@ -14,12 +14,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_POST['user_id'];
 
     $check = mysqli_query($conn, "SELECT role FROM users WHERE user_id='$user_id'");
+    
     if ($check && mysqli_num_rows($check) > 0) {
         $user = mysqli_fetch_assoc($check);
 
         if ($user['role'] === 'admin' && $user['user_id']='a_1') {
             $error = "Cannot delete main admin!";
-        } else {
+        } 
+
+        else {
            
             $sql = "DELETE FROM users WHERE user_id='$user_id'";
             if (mysqli_query($conn, $sql)) {
@@ -28,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $error = "Error deleting user: " . mysqli_error($conn);
             }
         }
-    } else {
+    } 
+
+    else {
         $error = "User not found!";
     }
 }
@@ -39,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Delete User</title>
+    
     <style>
         body {
             margin: 0;
@@ -138,6 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </style>
 </head>
+
 <body>
 
 <header>

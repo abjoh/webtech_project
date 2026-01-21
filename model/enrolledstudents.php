@@ -32,32 +32,7 @@ while ($row = mysqli_fetch_assoc($sectionsResult)) {
     <meta charset="UTF-8">
     <title>Enrolled Students</title>
     
-    <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
-
-        .header {
-            background:#0077cc; color:white; padding:20px 40px;
-            display:flex; justify-content:space-between; align-items:center;
-        }
-        .header a { color:white; text-decoration:none; font-weight:bold; }
-
-        .container { padding:40px; display:flex; flex-wrap:wrap; gap:20px; }
-
-        .section-box {
-            background:white; border-radius:10px; padding:20px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.15); width:300px;
-        }
-        .section-box h3 { margin-top:0; }
-
-        ul { list-style:none; padding-left:0; }
-        li { margin-bottom:5px; }
-
-        .back-btn {
-            display:inline-block; padding:10px 20px; background:#555;
-            color:white; text-decoration:none; border-radius:6px; margin:20px;
-        }
-        .back-btn:hover { background:#333; }
-    </style>
+    <link rel="stylesheet" href="../view/enrolledstudents.css">
 </head>
 
 <body>

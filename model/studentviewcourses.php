@@ -41,68 +41,7 @@ $result = mysqli_query($conn, $sql);
 <meta charset="UTF-8">
 <title>My Registered Courses</title>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-}
-
-.header {
-    background-color: #0077cc;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 26px;
-}
-
-.header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-th {
-    background-color: #0077cc;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.no-data {
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-}
-</style>
+<link rel="stylesheet" href="../view/studentviewcourses.css">
 </head>
 
 <body>

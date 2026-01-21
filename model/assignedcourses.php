@@ -29,19 +29,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <title>Assigned Courses</title>
     
-    <style>
-        body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
-        .header { background:#0077cc; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
-        .header a { color:white; text-decoration:none; font-weight:bold; }
-        .container { padding:40px; display:flex; flex-direction:column; align-items:center; }
-        table { border-collapse: collapse; width:90%; max-width:900px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-        th, td { padding:12px 15px; border:1px solid #ddd; text-align:center; }
-        th { background:#0077cc; color:white; }
-        tr:nth-child(even) { background:#f9f9f9; }
-        tr:hover { background:##555; }
-        .back-btn { display:inline-block; padding:10px 20px; background:#0077cc; color:white; text-decoration:none; border-radius:6px; margin:20px 0; }
-        .back-btn:hover { background:#005fa3; }
-    </style>
+    <link rel="stylesheet" href="../view/assignedcourse.css">
 </head>
 
 <body>

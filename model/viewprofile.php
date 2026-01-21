@@ -25,26 +25,16 @@ $user = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <title>My Profile</title>
     
-    <style>
-        body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
-        .header { background:#0077cc; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
-        .header a { color:white; text-decoration:none; font-weight:bold; }
-        .container { max-width:500px; margin:50px auto; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-        h2 { text-align:center; margin-bottom:25px; }
-        .profile-item { margin-bottom:15px; }
-        .label { font-weight:bold; margin-right:10px; }
-        .back-btn { display:inline-block; padding:10px 20px; background:#0077cc; color:white; text-decoration:none; border-radius:6px; margin-top:20px; }
-        .back-btn:hover { background:#005fa3; }
-    </style>
+    <link rel="stylesheet" href="../view/viewprofile.css">
 </head>
 
 <body>
-
+<header>
 <div class="header">
     <h1>My Profile</h1>
     <a href="logout.php">Logout</a>
 </div>
-
+</header>
 <div class="container">
     <h2>Profile Details</h2>
 

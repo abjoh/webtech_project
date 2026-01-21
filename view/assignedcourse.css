@@ -1,70 +1,13 @@
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
-
-        .header {
-            background-color: #0077cc;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .header .links a {
-            color: white;
-            margin-left: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .header .links a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-grow: 1;
-            padding: 40px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            max-width: 800px;
-            background-color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        th, td {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        th {
-            background-color: #0077cc;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #e6f0ff;
-        }
+        body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
+        .header { background:#0077cc; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+        .header a { color:white; text-decoration:none; font-weight:bold; }
+        .container { padding:40px; display:flex; flex-direction:column; align-items:center; }
+        table { border-collapse: collapse; width:90%; max-width:900px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+        th, td { padding:12px 15px; border:1px solid #ddd; text-align:center; }
+        th { background:#0077cc; color:white; }
+        tr:nth-child(even) { background:#f9f9f9; }
+        tr:hover { background:##555; }
+        .back-btn { display:inline-block; padding:10px 20px; background:#0077cc; color:white; text-decoration:none; border-radius:6px; margin:20px 0; }
+        .back-btn:hover { background:#005fa3; }
+    

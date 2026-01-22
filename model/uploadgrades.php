@@ -88,6 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header>
 <div class="header">
     <h1>Upload Marks & Grades</h1>
+
     <a href="logout.php">Logout</a>
 </div>
 </header>
@@ -114,6 +115,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <option>F</option>
         </select>
         <button type="submit">Upload Marks</button>
+        <div class="back-btn">
+            <a href="javascript:history.back()" class="btn">← Back</a>
+        </div>
+
     </form>
 </div>
 </body>
